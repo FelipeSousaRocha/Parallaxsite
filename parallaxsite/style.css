@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+*{ /*Resetar CSS*/
+    margin: 0;
+    padding: 0;
+    font-family:  Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;/*Para que os elmentos tenham o tamanho que eu passar, não rompendo a caixa*/
+    font-size: 16px;
+}
+
+body, html{ /* Página toda */
+    line-height:1.8em; /* Espaço ou altura entre linhas */
+    height: 100%; /* Ocupar todo espaço */ 
+    color: #666;
+}
+
+.img1, .img2, .img3{
+    position: relative; /* Cada ptext dentro da sua imagem*/
+    opacity: 0.80;
+    background-position: center;
+    background-size: cover; /* Fundo completo */
+    background-repeat: no-repeat; /* Sem repetir */
+    background-attachment:fixed /* Imagem fixa nao se mexe */
+}
+
+.img1{
+    background-image: url('img/site1.jpg');
+    min-height: 100%;
+}
+
+.img2{
+    background-image: url('img/site2.jpg');
+    min-height: 400px;
+}
+
+.img3{
+    background-image: url('img/site3.jpg');
+    min-height: 400px; /* Tamanho minimo */
+}
+
+h2{
+    padding-bottom: 2%;
+}
+
+.section{
+    text-align: center;
+    padding: 50px 80px; /* Altura e largura do espaço interno */
+}
+
+.section-light{ /* Claro */ 
+    background-color:#f4f4f4;
+    color:#666;
+}
+
+.section-dark{ /* Escuro */
+    background-color:#282e34;
+    color:#ddd;
+  }
+
+.ptext{
+    position: absolute; /* Posição do texto dentro da imagem */ 
+    top:50%;/* Meio da imagem */
+    width:100%; /* Largura 100% da pagina */ 
+    text-align: center;
+    color:#000;
+    font-size:30px;
+    letter-spacing:6px; /* Espaço entre letras */
+    text-transform:uppercase; /* Maiusculas */
+    font-weight: bolder; /* Negrito */ 
+}
+
+.ptext .border { 
+    background-color:#111;
+    color:#fff;
+    padding:25px; /* Box dentro da imagem */
+}
+
+.img2 .trans{
+    background-color: transparent;
+}
+
+.img3 .trans{
+    background-color: transparent;
+}
+
+@media(max-width:568px){
+    .img1, .img2, .img3{
+      background-attachment:scroll; 
+
+      /*
+      fixed = parallax
+      scroll = normal
+    */
+
+    }
+  }
