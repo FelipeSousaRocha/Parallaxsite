@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #333;
+    color: #fff;
+    font-size: 1.1em;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+img {
+    display: block; /* faz com que o elemento HTML seja renderizado como bloco, tal como os parágrafos e os cabeçalhos o são. Um bloco contém um espaço em branco tanto em cima como embaixo e não permite outros elementos HTML ao lado, exceto quando tiver sido declarado ao contrário (por exemplo, declarar a propriedade float para o elemento próximo ao bloco). */
+    width: 100%;
+    height: auto;
+  }
+
+h1, h2, h3 {
+    padding: 1em 0; /* Espaçamento interno */
+  }
+
+p {
+    padding: 1em 0; /* Espaçamento interno */
+  }
+
+.btn {
+    display: inline-block; /* para tais elementos você forçará o navegador a reconhecer o valor definido para a propriedade width */
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    padding: 1em 2em;
+    border: 1px solid #666;
+    margin: 0.5em ;
+  }
+
+.btn:hover {
+    background: #eaeaea;
+    color: #333;
+  }
+
+/* Header Showcase */
+
+#showcase {
+    min-height: 450px; /* Altura */
+    color: #fff;
+    text-align: center;
+  }
+
+#showcase .bg-image {
+    position: absolute; /* texto interno */
+    background: #333
+      url("https://static.pexels.com/photos/248515/pexels-photo-248515.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 450px;
+    z-index: -1; /* não deixa o read more transparente */
+    opacity: 0.4;
+  }
+
+  #showcase h1 {
+    padding-top: 100px;
+  }
+
+
+#showcase .content-wrap,
+ #section-a .content-wrap {
+    padding: 0 1.5em;
+  }
+
+/* Section A */
+
+#section-a {
+    background: #eaeaea;
+    color: #333;
+    padding-bottom: 2em; /* espaço inferior */
+  }
+
+/* Section B */
+
+#section-b {
+    padding: 2em 1em 1em;
+  }
+
+#section-b ul {
+    list-style: none; /* Tira ponto */
+    margin: 0;
+    padding: 0; /* zera */
+}
+
+#section-b li {
+    margin-bottom: 1em;
+    background: #fff;
+    color: #333;
+  }
+
+.card-content {
+    padding: 1.5em;
+  }
+
+  * Section C */
+
+#section-c {
+    background: #fff;
+    color: #333;
+    padding: 2em;
+  }
+
+/* Section D / Boxes */
+
+#section-d .box {
+    padding: 2em;
+  }
+
+#section-d .box:first-child {
+    background: #2690d4;
+  }
+
+  /* Footer */
+#main-footer {
+    padding: 2em;
+    background: #000;
+    color: #fff;
+    text-align: center;
+  }
+
+#main-footer a {
+    color: #2690d4;
+    text-decoration: none; /* tirar efeitos */
+  }
+
+/* Media Queries */
+
+@media (min-width: 700px) {
+    .grid {
+      display: grid; /* Coloca os content-wrap ao lado  */
+      grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr; /* conf das colunas */
+    }
+
+    .content-wrap,
+    #section-b ul {
+      grid-column: 2/4;
+    } /* tudo em colunas */
+
+    .box,
+    #main-footer div {
+      grid-column: span 2;
+    } /* ao lado certinho footer */
+
+    #section-b ul {
+      display: flex; /* deixar ao lado */
+      justify-content: space-around; /* espaço igual entre os itens */
+    }
+
+    #section-b li {
+      width: 30%; /* largura */
+    }
+  }
