@@ -1,0 +1,237 @@
+@charset "UTF-8";
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font: 15px/1.5 Arial, Helvetica,sans-serif;
+    background-color:#f4f4f4;
+  }
+  
+  /* Global */
+  .container{
+    width:80%; /* responsividade  ou seja ocupa 80% da largura*/
+    margin:auto; /* resposividade e joga no centro devido a margens */
+    overflow:hidden; /* Caso saia da div fique oculto */
+  }
+  
+  ul{
+    margin:0;
+    padding:0;
+  }
+  
+  .button_1{
+    height:33px;
+    background:#e8491d;
+    border:0; /* Tirar borda */
+    padding-left: 20px;
+    padding-right:20px;
+    color:#ffffff;
+    cursor: pointer;
+    font-size: 16x;
+    border-radius: 5px;
+  }
+
+  .button_1:hover{
+      background-color: #ff3700;
+  }
+  
+  .dark{
+    padding:15px;
+    background:#35424a;
+    color:#ffffff;
+    margin-top:10px;
+    margin-bottom:10px;
+    border-radius: 5px;
+  }
+  
+  /* Header **/
+  header{
+    background:#35424a;
+    color:#ffffff;
+    padding-top:30px;
+    min-height:70px; /* Responsividade */
+    border-bottom:#e8491d 3px solid;
+  }
+  
+  header a{
+    color:#ffffff;
+    text-decoration:none;
+    text-transform: uppercase;
+    font-size:16px;
+  }
+  
+  header li{
+    float:left; /* Deixar ambos ao lado */
+    display:inline; /* Em linha */
+    padding: 0 20px 0 20px;
+  }
+  
+  header #branding{
+    float:left; /* Ao lado */
+  }
+  
+  header #branding h1{
+    margin:0; /* garantir que esteja 0 */
+  }
+  
+  header nav{
+    float:right; /* Ir para direita */
+    margin-top:10px;
+  }
+  
+  header .highlight, header .current a{
+    color:#e8491d;
+    font-weight:bold; /* Negrito */
+  }
+  
+  header a:hover{
+    color:#cccccc;
+    font-weight:bold;
+    padding: 3px 6px;
+    border-bottom: #e8491d 3px solid;
+    transition: .2s;
+  }
+
+  /* showcase */
+  #showcase{
+      min-height: 400px; /* responsividade */
+      background: url('../imagens/showcase.jpg') no-repeat 0 -400px;
+      text-align: center;
+      color: #fff;
+  }
+  #showcase h1{
+      margin-top: 100px;
+      font-size: 55px;
+      margin-bottom: 10px;
+  }
+  #showcase p{
+      font-size: 20px;
+  }
+
+  /* Newsletter */
+  #newsletter{
+      padding: 15px;
+      color: #fff;
+      background: #35424a;
+  }
+  #newsletter h1{
+      float: left;
+      margin-bottom: 5px;
+  }
+  #newsletter form{
+      float: right;
+  }
+  #newsletter input[type="email"]{/* Dentro do botao */
+      padding: 4px;
+      height: 20px;
+      width: 250px; 
+      outline: 0;
+      border: 1px solid #ced4da;
+      border-radius: 0.25em;
+  }
+  #newsletter input[type="email"]:focus{
+      box-shadow: 0 0 0 0.2em #e8491d;
+      border-color: #e8491d;
+  }
+
+  /* Boxes */
+  #boxes{
+      margin-top: 20px;
+  }
+  #boxes .box{
+      float: left;
+      width: 30%; /* Resposividade e dividir em 3 */
+      padding: 10px;
+      text-align: center;
+  }
+  #boxes .box img{
+      width: 90px; /* diminuir */
+  }
+
+  .quote input[type="email"], input[type="text"], textarea{
+    outline: 0;
+    border: 1px solid #ced4da;
+    border-radius: 0.25em;
+  }
+  .quote input[type="email"]:focus, input[type="text"]:focus, textarea:focus{
+  box-shadow: 0 0 0 0.2em #e8491d;
+      border-color: #e8491d;
+    }
+
+  /* Sidebar */
+  aside#sidebar .quote input, aside#sidebar .quote textarea{
+    width:90%;
+    padding:5px;
+  }
+  aside#sidebar{
+    float: right; /* Direita */
+    width: 30%;
+    margin-top: 10px;
+  }
+
+  /* Main-col */
+  article#main-col{
+  float:left; /* Esquerda */
+  width:65%;
+  }
+
+  aside#sidebar .quote input, aside#sidebar .quote textarea{
+    width: 90%;
+    padding: 5px;
+  }
+
+  /* Services */
+  ul#services li{
+  list-style: none;
+  padding:20px;
+  border: #cccccc solid 1px;
+  margin-bottom:5px;
+  background:#e6e6e6;
+  }
+
+  footer{
+      padding: 20px;
+      margin-top: 20px;
+      color: #fff;
+      background-color: #e8491d;
+      text-align: center;
+  }
+
+  /* Media Queries */
+
+  @media(max-width: 768px){
+    header #branding,
+    header nav,
+    header nav li,
+    #newsletter h1,
+    #newsletter form,
+    #boxes .box,
+    article#main-col,
+    aside#sidebar{
+      float:none;/* Sem flutuar */
+      text-align:center;
+      width:100%;
+    }
+  
+    header{
+      padding-bottom:20px;
+    }
+  
+    #showcase h1{
+      margin-top:40px;/* Distancia */
+    }
+  
+    #newsletter button, .quote button{
+      display:block;/* Um acima do outro */
+      width:100%; /* Ocupar tudo */
+    }
+  
+    #newsletter form input[type="email"], .quote input, .quote textarea{
+      width:100%;
+      margin-bottom:5px;
+    }
+  
+  }
